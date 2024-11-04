@@ -10,3 +10,7 @@ void Register::setCell(int address, int val) {
     // Sets the value in the specified register
     memory[address] = val;
 }
+
+int Register::getSize()const{
+    return size;
+}
