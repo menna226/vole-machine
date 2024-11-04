@@ -1,8 +1,8 @@
-// Register.h
 #ifndef REGISTER_H
 #define REGISTER_H
 
 #include <vector>
+#include <iostream>
 
 class Register {
 private:
@@ -10,13 +10,16 @@ private:
     static const int size = 16;              // Number of registers
 
 public:
+    int getSize() const;
+
     // Gets the value of a specific register
     int getCell(int address) const;
 
     // Sets a value in a specific register
     void setCell(int address, int val);
-};
 
-    int getSize() const;
+    // Displays the values of all registers
+    void display() const;
+};
 
 #endif
