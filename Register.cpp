@@ -1,5 +1,8 @@
-// Register.cpp
 #include "Register.h"
+#include <iostream>
+#include <iomanip>
+
+using namespace std;
 
 int Register::getCell(int address) const {
     // Returns the value in the specified register
@@ -11,6 +14,14 @@ void Register::setCell(int address, int val) {
     memory[address] = val;
 }
 
-int Register::getSize()const{
+void Register::display() const {
+    cout << "Register State:" << endl;
+    for (int i = 0; i < size; ++i) {
+        cout << "R" << setw(2) << i << ": " << setw(4) << memory[i] << endl;
+    }
+    cout << endl;
+}
+
+int Register::getSize()const {
     return size;
 }
