@@ -5,23 +5,21 @@
 using namespace std;
 
 int Register::getCell(int address) const {
-    // Returns the value in the specified register
     return memory[address];
 }
 
 void Register::setCell(int address, int val) {
-    // Sets the value in the specified register
     memory[address] = val;
 }
 
 void Register::display() const {
-    cout << "Register State:" << endl;
+    cout << "Register State:" << '\n';
     for (int i = 0; i < size; ++i) {
-        cout << "R" << setw(2) << i << ": " << setw(4) << memory[i] << endl;
+        cout << "R" << setw(2) << i << ": " << setw(4) << (int)memory[i] << '\n';
     }
-    cout << endl;
+    cout << '\n';
 }
 
-int Register::getSize()const {
+int Register::getSize() const {
     return size;
 }

@@ -1,15 +1,17 @@
 #ifndef REGISTER_H
 #define REGISTER_H
 
-#include <vector>
 #include <iostream>
+#include <iomanip>
 
 class Register {
 private:
-    int memory[16];             // Array to store register values
-    static const int size = 16;              // Number of registers
+    char memory[16] = {0};  // Array to store register values
 
 public:
+    static const int size = 16;  // Number of registers 
+
+    // Gets the number of registers
     int getSize() const;
 
     // Gets the value of a specific register
